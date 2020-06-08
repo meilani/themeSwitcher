@@ -90,20 +90,19 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /***************
     HEADER
 ***************/
 header {
-  margin: 36px 25px 0 25px;
-}
-
-header h1 {
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: 700;
-  color: #1e202a;
+  max-width: 1200px;
+  width: 326px;
+  margin: 36px 40px 0 40px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 header h2 {
@@ -114,7 +113,33 @@ header h2 {
 }
 
 header .title {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #252a41;
+}
+
+header .title h1 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #1e202a;
+  margin-bottom: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+header .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 /***************
@@ -190,6 +215,17 @@ input:checked + .slider:before {
 ***************/
 main {
   margin: 0 25px 25px 25px;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /***************
@@ -210,6 +246,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  margin-bottom: 46px;
 }
 
 #large-cards .large-card {
@@ -234,6 +271,8 @@ main {
   height: 216px;
   padding: 32px 0 24px 0;
   margin: 0 24px 24px 24px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #large-cards #facebook-card {
@@ -264,6 +303,8 @@ main {
   line-height: 48px;
   letter-spacing: -2px;
   color: #1e202a;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #large-cards .followers p {
@@ -293,11 +334,17 @@ main {
 /***************
     OVERVIEW
 ***************/
+.bottom {
+  width: 326px;
+}
+
 .overview h2 {
   color: #63687e;
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 27px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /***************
@@ -333,6 +380,8 @@ main {
   border-radius: 5px;
   padding: 25px;
   margin-bottom: 16px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #small-cards .small-card .small-top {
@@ -379,13 +428,19 @@ main {
   font-size: 32px;
   line-height: 39px;
   color: #1e202a;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /***************
     FOOTER
 ***************/
 footer {
+  max-width: 1200px;
   margin: 0 25px 25px 25px;
+  color: #1e202a;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 footer .attribution {
@@ -400,6 +455,64 @@ footer .attribution a {
 /***************
     MEDIA QUERIES
 ***************/
+@media (min-width: 750px) {
+  header {
+    width: 548px;
+  }
+  #large-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  #large-cards .large-card {
+    width: 255px;
+    margin: 0 15px 24px 15px;
+  }
+  .bottom {
+    width: 570px;
+  }
+  .overview {
+    margin-bottom: 24px;
+    margin-left: 15px;
+  }
+  #small-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  #small-cards .small-card {
+    width: 255px;
+    margin: 0 15px 12px 15px;
+  }
+}
+
+@media (min-width: 920px) {
+  header {
+    width: 828px;
+  }
+  .bottom {
+    width: 855px;
+  }
+}
+
+@media (min-width: 1205px) {
+  header {
+    width: 1112px;
+  }
+  .bottom {
+    width: 1140px;
+    margin-bottom: 50px;
+  }
+}
+
 /************************
     DARK THEME
 ************************/
@@ -423,6 +536,10 @@ footer .attribution a {
   /***************
     FOOTER
 ***************/
+}
+
+.dark header {
+  background-color: #1f212e;
 }
 
 .dark .title h1 {
@@ -449,27 +566,7 @@ footer .attribution a {
   color: #fff;
 }
 
-/************************
-    LIGHT THEME
-************************/
-.light {
-  /***************
-    HEADER
-***************/
-  /***************
-    MAIN
-***************/
-  /***************
-    LARGE CARDS
-***************/
-  /***************
-    OVERVIEW
-***************/
-  /***************
-    SMALL CARDS
-***************/
-  /***************
-    FOOTER
-***************/
+.dark footer {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

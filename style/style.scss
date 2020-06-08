@@ -109,6 +109,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    transition: all .5s ease;
 }
 
 
@@ -116,14 +117,12 @@ body {
     HEADER
 ***************/
 header {
-    margin: 36px 25px 0 25px;
+    max-width: 1200px;
+    width: 326px;
+    margin: 36px 40px 0 40px;
+    transition: all .5s ease;
 
-    h1 {
-        font-size: 24px;
-        line-height: 29px;
-        font-weight: 700;
-        color: $dark-blue1;
-    }
+
     h2 {
         font-size: 14px;
         line-height: 17px;
@@ -131,9 +130,29 @@ header {
         font-weight: 700;
     }
     .title {
-        margin-bottom: 24px;
+        padding-bottom: 24px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid $desaturated-blue1;
+
+        h1 {
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 700;
+            color: $dark-blue1;
+            margin-bottom: 5px;
+            transition: all .5s ease;
+        }
+    }
+
+    .mode {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
     }
 }
+
+
 
 /***************
     SLIDER
@@ -210,6 +229,10 @@ header {
 ***************/
 main {
     margin: 0 25px 25px 25px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /***************
@@ -221,6 +244,7 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom: 46px;
 
     .large-card {
         background-color: $light-blue2;
@@ -235,6 +259,7 @@ main {
         height: 216px;
         padding: 32px 0 24px 0;
         margin: 0 24px 24px 24px;
+        transition: all .5s ease;
     }
     #facebook-card {
         border-top-color: $facebook-color;
@@ -263,6 +288,7 @@ main {
             line-height: 48px;
             letter-spacing: -2px;
             color: $dark-blue1;
+            transition: all .5s ease;
         }
         p {
             font-size: 12px;
@@ -293,12 +319,18 @@ main {
 /***************
     OVERVIEW
 ***************/
+.bottom {
+    width: 326px;
+}
+
 .overview {
+
     h2 {
         color: $blue;
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 27px;
+        transition: all .5s ease;
     }
 }
 
@@ -321,6 +353,7 @@ main {
         border-radius: 5px;
         padding: 25px;
         margin-bottom: 16px;
+        transition: all .5s ease;
 
         .small-top {
             display: flex;
@@ -347,6 +380,7 @@ main {
                 font-size: 32px;
                 line-height: 39px;
                 color: $dark-blue1;
+                transition: all .5s ease;
             }
         }
         
@@ -357,7 +391,10 @@ main {
     FOOTER
 ***************/
 footer {
+    max-width: 1200px;
     margin: 0 25px 25px 25px;
+    color: $dark-blue1;
+    transition: all .5s ease;
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 }
@@ -365,17 +402,75 @@ footer {
 /***************
     MEDIA QUERIES
 ***************/
+@media (min-width: 750px) {
+    header {
+        width: 548px;
+    }
+    #large-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1200px;
+
+        .large-card {
+            width: 255px;
+            margin: 0 15px 24px 15px;
+        }
+    }
+
+    .bottom {
+        width: 570px;
+    }
+    .overview {
+        margin-bottom: 24px;
+        margin-left: 15px;
+    }
+
+
+    #small-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1200px;
+
+        .small-card {
+            width: 255px;
+            margin: 0 15px 12px 15px;
+        }
+    }
+}
+
+@media (min-width: 920px) {
+    header {
+        width: 828px;
+    }
+
+    .bottom {
+        width: 855px;
+    }
+}
+
+@media (min-width: 1205px) {
+    header {
+        width: 1112px;
+    }
+    .bottom {
+        width: 1140px;
+        margin-bottom: 50px;
+    }
+}
+
 
 /************************
     DARK THEME
 ************************/
 
 .dark {
-
     background: $dark-blue1;
 /***************
     HEADER
 ***************/
+    header {
+        background-color: $dark-blue2;
+    }
     .title {
 
         h1 {
@@ -428,36 +523,7 @@ footer {
 /***************
     FOOTER
 ***************/
+footer {
+    color: #fff;
 }
-
-/************************
-    LIGHT THEME
-************************/
-
-.light {
-/***************
-    HEADER
-***************/
-
-/***************
-    MAIN
-***************/
-
-/***************
-    LARGE CARDS
-***************/
-
-
-
-/***************
-    OVERVIEW
-***************/
-
-/***************
-    SMALL CARDS
-***************/
-
-/***************
-    FOOTER
-***************/
 }
