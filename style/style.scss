@@ -135,6 +135,8 @@ header {
     .header-container {
         max-width: 1200px;
         width: 326px;
+        display: flex;
+        flex-direction: column;
     }
 
 
@@ -143,6 +145,7 @@ header {
         line-height: 17px;
         color: $text-bold-color;
         font-weight: 700;
+        margin-right: 16px;
     }
     .title {
         padding-bottom: 24px;
@@ -164,6 +167,7 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: 40px;
     }
 }
@@ -441,6 +445,13 @@ footer {
         padding-bottom: 100px;
         .header-container {
             width: 548px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .title {
+            border-bottom: none;
         }
     }
     #large-cards {
