@@ -75,9 +75,7 @@ The designs were created to the following widths:
 
 body {
   font-family: "Inter", sans-serif;
-  padding: 36px 25px 45px 25px;
   max-width: 100vw;
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,6 +94,10 @@ body {
 /***************
     HEADER
 ***************/
+header {
+  margin: 36px 25px 0 25px;
+}
+
 header h1 {
   font-size: 24px;
   line-height: 29px;
@@ -184,6 +186,10 @@ input:checked + .slider:before {
 /***************
     MAIN
 ***************/
+main {
+  margin: 0 25px 25px 25px;
+}
+
 /***************
     LARGE CARDS
 ***************/
@@ -195,11 +201,36 @@ input:checked + .slider:before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 #large-cards .large-card {
   border-radius: 5px;
   border-top: 4px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  width: 326px;
+  height: 216px;
+  padding: 32px 0 24px 0;
+  margin: 0 24px 24px 24px;
 }
 
 #large-cards #facebook-card {
@@ -225,15 +256,132 @@ input:checked + .slider:before {
   font-weight: 700;
 }
 
+#large-cards .followers strong {
+  font-size: 56px;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+#large-cards .followers p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 5px;
+  color: #63687D;
+  text-transform: uppercase;
+  margin-top: 9px;
+}
+
+.change {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+}
+
+.up {
+  color: #1db489;
+}
+
+.down {
+  color: #dc414c;
+}
+
 /***************
     OVERVIEW
 ***************/
+.overview h2 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 27px;
+}
+
 /***************
     SMALL CARDS
 ***************/
+#small-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#small-cards .small-card {
+  width: 326px;
+  height: 125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  padding: 25px;
+  margin-bottom: 16px;
+}
+
+#small-cards .small-card .small-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+
+#small-cards .small-card .small-top h3 {
+  color: #63687D;
+  font-size: 14px;
+  line-height: 17px;
+  display: inline;
+}
+
+#small-cards .small-card .small-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#small-cards .small-card .small-bottom strong {
+  font-size: 32px;
+  line-height: 39px;
+}
+
 /***************
     FOOTER
 ***************/
+footer {
+  margin: 0 25px 25px 25px;
+}
+
 footer .attribution {
   font-size: 11px;
   text-align: center;
@@ -272,6 +420,22 @@ footer .attribution a {
 }
 
 .dark .title h1 {
+  color: #fff;
+}
+
+.dark .followers strong {
+  color: #fff;
+}
+
+.dark #large-cards .large-card {
+  background-color: #252a41;
+}
+
+.dark #small-cards .small-card {
+  background-color: #252a41;
+}
+
+.dark #small-cards .small-card .small-bottom strong {
   color: #fff;
 }
 
