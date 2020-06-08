@@ -109,6 +109,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background: #fff;
+    transition: all .5s ease;
 }
 
 
@@ -119,14 +120,9 @@ header {
     max-width: 1200px;
     width: 326px;
     margin: 36px 40px 0 40px;
+    transition: all .5s ease;
 
-    h1 {
-        font-size: 24px;
-        line-height: 29px;
-        font-weight: 700;
-        color: $dark-blue1;
-        margin-bottom: 5px;
-    }
+
     h2 {
         font-size: 14px;
         line-height: 17px;
@@ -137,6 +133,15 @@ header {
         padding-bottom: 24px;
         margin-bottom: 16px;
         border-bottom: 1px solid $desaturated-blue1;
+
+        h1 {
+            font-size: 24px;
+            line-height: 29px;
+            font-weight: 700;
+            color: $dark-blue1;
+            margin-bottom: 5px;
+            transition: all .5s ease;
+        }
     }
 
     .mode {
@@ -254,6 +259,7 @@ main {
         height: 216px;
         padding: 32px 0 24px 0;
         margin: 0 24px 24px 24px;
+        transition: all .5s ease;
     }
     #facebook-card {
         border-top-color: $facebook-color;
@@ -282,6 +288,7 @@ main {
             line-height: 48px;
             letter-spacing: -2px;
             color: $dark-blue1;
+            transition: all .5s ease;
         }
         p {
             font-size: 12px;
@@ -323,6 +330,7 @@ main {
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 27px;
+        transition: all .5s ease;
     }
 }
 
@@ -345,6 +353,7 @@ main {
         border-radius: 5px;
         padding: 25px;
         margin-bottom: 16px;
+        transition: all .5s ease;
 
         .small-top {
             display: flex;
@@ -371,6 +380,7 @@ main {
                 font-size: 32px;
                 line-height: 39px;
                 color: $dark-blue1;
+                transition: all .5s ease;
             }
         }
         
@@ -384,6 +394,7 @@ footer {
     max-width: 1200px;
     margin: 0 25px 25px 25px;
     color: $dark-blue1;
+    transition: all .5s ease;
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 }
@@ -453,7 +464,6 @@ footer {
 ************************/
 
 .dark {
-
     background: $dark-blue1;
 /***************
     HEADER
