@@ -89,6 +89,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #fff;
 }
 
 /***************
@@ -102,6 +103,7 @@ header h1 {
   font-size: 24px;
   line-height: 29px;
   font-weight: 700;
+  color: #1e202a;
 }
 
 header h2 {
@@ -211,6 +213,7 @@ main {
 }
 
 #large-cards .large-card {
+  background-color: #f0f2fa;
   border-radius: 5px;
   border-top: 4px solid;
   display: -webkit-box;
@@ -260,6 +263,7 @@ main {
   font-size: 56px;
   line-height: 48px;
   letter-spacing: -2px;
+  color: #1e202a;
 }
 
 #large-cards .followers p {
@@ -290,7 +294,7 @@ main {
     OVERVIEW
 ***************/
 .overview h2 {
-  color: #fff;
+  color: #63687e;
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 27px;
@@ -316,6 +320,7 @@ main {
 }
 
 #small-cards .small-card {
+  background-color: #f0f2fa;
   width: 326px;
   height: 125px;
   display: -webkit-box;
@@ -373,6 +378,7 @@ main {
 #small-cards .small-card .small-bottom strong {
   font-size: 32px;
   line-height: 39px;
+  color: #1e202a;
 }
 
 /***************
@@ -423,12 +429,16 @@ footer .attribution a {
   color: #fff;
 }
 
-.dark .followers strong {
+.dark #large-cards .large-card {
+  background-color: #252a41;
+}
+
+.dark #large-cards .followers strong {
   color: #fff;
 }
 
-.dark #large-cards .large-card {
-  background-color: #252a41;
+.dark .overview h2 {
+  color: #fff;
 }
 
 .dark #small-cards .small-card {

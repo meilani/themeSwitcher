@@ -108,6 +108,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    background: #fff;
 }
 
 
@@ -121,6 +122,7 @@ header {
         font-size: 24px;
         line-height: 29px;
         font-weight: 700;
+        color: $dark-blue1;
     }
     h2 {
         font-size: 14px;
@@ -221,6 +223,7 @@ main {
     text-align: center;
 
     .large-card {
+        background-color: $light-blue2;
         border-radius: 5px;
         border-top: 4px solid;
         display: flex;
@@ -259,6 +262,7 @@ main {
             font-size: 56px;
             line-height: 48px;
             letter-spacing: -2px;
+            color: $dark-blue1;
         }
         p {
             font-size: 12px;
@@ -291,7 +295,7 @@ main {
 ***************/
 .overview {
     h2 {
-        color: #fff;
+        color: $blue;
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 27px;
@@ -309,6 +313,7 @@ main {
     justify-content: center;
 
     .small-card {
+        background-color: $light-blue2;
         width: 326px;
         height: 125px;
         display: flex;
@@ -341,6 +346,7 @@ main {
             strong {
                 font-size: 32px;
                 line-height: 39px;
+                color: $dark-blue1;
             }
         }
         
@@ -377,9 +383,7 @@ footer {
         }
     }
 
-    .followers strong {
-        color: #fff;
-    }
+
 
 /***************
     MAIN
@@ -392,11 +396,20 @@ footer {
     .large-card {
         background-color: $desaturated-blue1;
     }
+
+    .followers strong {
+        color: #fff;
+    }
 }
 
 /***************
     OVERVIEW
 ***************/
+.overview {
+    h2 {
+        color: #fff;
+    }
+}
 
 /***************
     SMALL CARDS
