@@ -90,6 +90,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /***************
@@ -99,14 +101,8 @@ header {
   max-width: 1200px;
   width: 326px;
   margin: 36px 40px 0 40px;
-}
-
-header h1 {
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: 700;
-  color: #1e202a;
-  margin-bottom: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 header h2 {
@@ -120,6 +116,16 @@ header .title {
   padding-bottom: 24px;
   margin-bottom: 16px;
   border-bottom: 1px solid #252a41;
+}
+
+header .title h1 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #1e202a;
+  margin-bottom: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 header .mode {
@@ -265,6 +271,8 @@ main {
   height: 216px;
   padding: 32px 0 24px 0;
   margin: 0 24px 24px 24px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #large-cards #facebook-card {
@@ -295,6 +303,8 @@ main {
   line-height: 48px;
   letter-spacing: -2px;
   color: #1e202a;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #large-cards .followers p {
@@ -333,6 +343,8 @@ main {
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 27px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /***************
@@ -368,6 +380,8 @@ main {
   border-radius: 5px;
   padding: 25px;
   margin-bottom: 16px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 #small-cards .small-card .small-top {
@@ -414,6 +428,8 @@ main {
   font-size: 32px;
   line-height: 39px;
   color: #1e202a;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 /***************
@@ -423,6 +439,8 @@ footer {
   max-width: 1200px;
   margin: 0 25px 25px 25px;
   color: #1e202a;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 footer .attribution {
