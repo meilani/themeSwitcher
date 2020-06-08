@@ -96,7 +96,9 @@ body {
     HEADER
 ***************/
 header {
-  margin: 36px 25px 0 25px;
+  max-width: 1200px;
+  width: 326px;
+  margin: 36px 40px 0 40px;
 }
 
 header h1 {
@@ -104,6 +106,7 @@ header h1 {
   line-height: 29px;
   font-weight: 700;
   color: #1e202a;
+  margin-bottom: 5px;
 }
 
 header h2 {
@@ -114,7 +117,23 @@ header h2 {
 }
 
 header .title {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #252a41;
+}
+
+header .mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 /***************
@@ -190,6 +209,7 @@ input:checked + .slider:before {
 ***************/
 main {
   margin: 0 25px 25px 25px;
+  max-width: 1200px;
 }
 
 /***************
@@ -210,6 +230,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  margin-bottom: 46px;
 }
 
 #large-cards .large-card {
@@ -293,6 +314,10 @@ main {
 /***************
     OVERVIEW
 ***************/
+.overview {
+  margin: 0 40px 27px 40px;
+}
+
 .overview h2 {
   color: #63687e;
   font-size: 24px;
@@ -385,6 +410,7 @@ main {
     FOOTER
 ***************/
 footer {
+  max-width: 1200px;
   margin: 0 25px 25px 25px;
 }
 
@@ -400,6 +426,54 @@ footer .attribution a {
 /***************
     MEDIA QUERIES
 ***************/
+@media (min-width: 750px) {
+  header {
+    width: 548px;
+  }
+  #large-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  #large-cards .large-card {
+    width: 255px;
+    margin: 0 15px 24px 15px;
+  }
+  .overview {
+    margin-bottom: 24px;
+  }
+  #small-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  #small-cards .small-card {
+    width: 255px;
+    margin: 0 15px 12px 15px;
+  }
+}
+
+@media (min-width: 920px) {
+  header,
+  .overview {
+    width: 828px;
+  }
+}
+
+@media (min-width: 1205px) {
+  header {
+    width: 1112px;
+  }
+}
+
 /************************
     DARK THEME
 ************************/
@@ -425,6 +499,10 @@ footer .attribution a {
 ***************/
 }
 
+.dark header {
+  background-color: #1f212e;
+}
+
 .dark .title h1 {
   color: #fff;
 }
@@ -447,29 +525,5 @@ footer .attribution a {
 
 .dark #small-cards .small-card .small-bottom strong {
   color: #fff;
-}
-
-/************************
-    LIGHT THEME
-************************/
-.light {
-  /***************
-    HEADER
-***************/
-  /***************
-    MAIN
-***************/
-  /***************
-    LARGE CARDS
-***************/
-  /***************
-    OVERVIEW
-***************/
-  /***************
-    SMALL CARDS
-***************/
-  /***************
-    FOOTER
-***************/
 }
 /*# sourceMappingURL=style.css.map */
