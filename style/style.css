@@ -89,20 +89,39 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #fff;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  background-color: #fff;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 /***************
     HEADER
 ***************/
 header {
+  width: 100%;
+  padding-bottom: 45px;
+  padding-top: 36px;
+  margin: 0 40px -45px 40px;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F7F9FF;
+}
+
+header .header-container {
   max-width: 1200px;
   width: 326px;
-  margin: 36px 40px 0 40px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
 }
 
 header h2 {
@@ -124,8 +143,10 @@ header .title h1 {
   font-weight: 700;
   color: #1e202a;
   margin-bottom: 5px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
 }
 
 header .mode {
@@ -170,8 +191,8 @@ header .mode {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, #378fe6, #3eda82);
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .slider:before {
@@ -182,12 +203,18 @@ header .mode {
   left: 4px;
   bottom: 3px;
   background-color: #252a41;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 input:checked + .slider {
   background: #aeb3cb;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+input:checked + .slider:hover {
+  background: linear-gradient(45deg, #378fe6, #3eda82);
 }
 
 input:focus + .slider {
@@ -271,8 +298,15 @@ main {
   height: 216px;
   padding: 32px 0 24px 0;
   margin: 0 24px 24px 24px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
+}
+
+#large-cards .large-card:hover {
+  background-color: #E1E4F0;
+  cursor: pointer;
 }
 
 #large-cards #facebook-card {
@@ -303,8 +337,10 @@ main {
   line-height: 48px;
   letter-spacing: -2px;
   color: #1e202a;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
 }
 
 #large-cards .followers p {
@@ -343,8 +379,10 @@ main {
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 27px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
 }
 
 /***************
@@ -380,8 +418,14 @@ main {
   border-radius: 5px;
   padding: 25px;
   margin-bottom: 16px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
+}
+
+#small-cards .small-card:hover {
+  background-color: #E1E4F0;
 }
 
 #small-cards .small-card .small-top {
@@ -428,8 +472,10 @@ main {
   font-size: 32px;
   line-height: 39px;
   color: #1e202a;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
 }
 
 /***************
@@ -439,8 +485,10 @@ footer {
   max-width: 1200px;
   margin: 0 25px 25px 25px;
   color: #1e202a;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s, .5s;
+          transition-duration: .5s, .5s;
 }
 
 footer .attribution {
@@ -457,6 +505,10 @@ footer .attribution a {
 ***************/
 @media (min-width: 750px) {
   header {
+    margin-bottom: -100px;
+    padding-bottom: 100px;
+  }
+  header .header-container {
     width: 548px;
   }
   #large-cards {
@@ -495,7 +547,7 @@ footer .attribution a {
 }
 
 @media (min-width: 920px) {
-  header {
+  header .header-container {
     width: 828px;
   }
   .bottom {
@@ -504,7 +556,7 @@ footer .attribution a {
 }
 
 @media (min-width: 1205px) {
-  header {
+  header .header-container {
     width: 1112px;
   }
   .bottom {
@@ -550,6 +602,10 @@ footer .attribution a {
   background-color: #252a41;
 }
 
+.dark #large-cards .large-card:hover {
+  background-color: #333A55;
+}
+
 .dark #large-cards .followers strong {
   color: #fff;
 }
@@ -560,6 +616,11 @@ footer .attribution a {
 
 .dark #small-cards .small-card {
   background-color: #252a41;
+}
+
+.dark #small-cards .small-card:hover {
+  background-color: #333A55;
+  cursor: pointer;
 }
 
 .dark #small-cards .small-card .small-bottom strong {
