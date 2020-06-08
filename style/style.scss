@@ -75,6 +75,8 @@ $dark-blue1: hsl(230, 17%, 14%);
 $dark-blue2: hsl(232, 19%, 15%);
 $desaturated-blue1: hsl(228, 28%, 20%);
 $desaturated-blue2: hsl(228, 34%, 66%);
+$hover-light: #E1E4F0;
+$hover-dark: #333A55;
 
 $green: hsl(163, 72%, 41%);
 $red: hsl(356, 69%, 56%);
@@ -108,8 +110,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
-    transition: all .5s ease;
+    background-color: #fff;
+    transition-property: background, color;
+    transition-duration: .5s;
 }
 
 
@@ -117,10 +120,22 @@ body {
     HEADER
 ***************/
 header {
-    max-width: 1200px;
-    width: 326px;
-    margin: 36px 40px 0 40px;
-    transition: all .5s ease;
+    width: 100%;
+    padding-bottom: 45px;
+    padding-top: 36px;
+    margin: 0 40px -45px 40px;
+    transition-property: background, color;
+    transition-duration: .5s, .5s;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #F7F9FF;
+
+    .header-container {
+        max-width: 1200px;
+        width: 326px;
+    }
 
 
     h2 {
@@ -140,7 +155,8 @@ header {
             font-weight: 700;
             color: $dark-blue1;
             margin-bottom: 5px;
-            transition: all .5s ease;
+            transition-property: background, color;
+            transition-duration: .5s, .5s;
         }
     }
 
@@ -184,8 +200,7 @@ header {
     right: 0;
     bottom: 0;
     background: $dark-toggle;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: .5s;
   }
   
   .slider:before {
@@ -196,12 +211,15 @@ header {
     left: 4px;
     bottom: 3px;
     background-color: $desaturated-blue1;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: .5s;
   }
   
   input:checked + .slider {
     background: $light-toggle;
+    transition: .5s;
+    &:hover {
+        background: $dark-toggle;
+    }
   }
   
   input:focus + .slider {
@@ -259,7 +277,13 @@ main {
         height: 216px;
         padding: 32px 0 24px 0;
         margin: 0 24px 24px 24px;
-        transition: all .5s ease;
+        transition-property: background, color;
+        transition-duration: .5s, .5s;
+
+        &:hover {
+            background-color: $hover-light;
+            cursor: pointer;
+        }
     }
     #facebook-card {
         border-top-color: $facebook-color;
@@ -288,7 +312,8 @@ main {
             line-height: 48px;
             letter-spacing: -2px;
             color: $dark-blue1;
-            transition: all .5s ease;
+            transition-property: background, color;
+            transition-duration: .5s, .5s;
         }
         p {
             font-size: 12px;
@@ -330,7 +355,8 @@ main {
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 27px;
-        transition: all .5s ease;
+        transition-property: background, color;
+        transition-duration: .5s, .5s;
     }
 }
 
@@ -353,7 +379,12 @@ main {
         border-radius: 5px;
         padding: 25px;
         margin-bottom: 16px;
-        transition: all .5s ease;
+        transition-property: background, color;
+        transition-duration: .5s, .5s;
+
+        &:hover {
+            background-color: $hover-light;
+        }
 
         .small-top {
             display: flex;
@@ -380,7 +411,8 @@ main {
                 font-size: 32px;
                 line-height: 39px;
                 color: $dark-blue1;
-                transition: all .5s ease;
+                transition-property: background, color;
+                transition-duration: .5s, .5s;
             }
         }
         
@@ -394,7 +426,8 @@ footer {
     max-width: 1200px;
     margin: 0 25px 25px 25px;
     color: $dark-blue1;
-    transition: all .5s ease;
+    transition-property: background, color;
+    transition-duration: .5s, .5s;
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 }
@@ -404,7 +437,11 @@ footer {
 ***************/
 @media (min-width: 750px) {
     header {
-        width: 548px;
+        margin-bottom: -100px;
+        padding-bottom: 100px;
+        .header-container {
+            width: 548px;
+        }
     }
     #large-cards {
         flex-direction: row;
@@ -439,7 +476,7 @@ footer {
 }
 
 @media (min-width: 920px) {
-    header {
+    header .header-container {
         width: 828px;
     }
 
@@ -449,7 +486,7 @@ footer {
 }
 
 @media (min-width: 1205px) {
-    header {
+    header .header-container {
         width: 1112px;
     }
     .bottom {
@@ -490,6 +527,10 @@ footer {
 #large-cards {
     .large-card {
         background-color: $desaturated-blue1;
+
+        &:hover {
+            background-color: $hover-dark;
+        }
     }
 
     .followers strong {
@@ -512,6 +553,10 @@ footer {
 #small-cards {
     .small-card {
         background-color: $desaturated-blue1;
+        &:hover {
+            background-color: $hover-dark;
+            cursor: pointer;
+        }
         .small-bottom {
             strong {
                 color: #fff;
